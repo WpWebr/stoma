@@ -64,7 +64,6 @@ get_header();
 
     <?php endif; 
   ?>
-
   <!-- Что такое контурная пластика?  -->
   <div class="what">
     <div class="wrap">
@@ -409,15 +408,16 @@ get_header();
               <div class="pricelist__tabs">
                 <?php
                   if($vkladkas):
+                    $vkladkas_col=count($vkladkas); 
+                      ?>
+                      <style>@media (max-width: 730px){.pricelist__tab-content<?php echo $per; ?>{padding-top: <?php echo $vkladkas_col*41+12 ?>px}}</style>
+                      <?php
                     foreach ($vkladkas as $vkl => $vkladka):
                       if($vkl==0){$checked='checked';}else {$checked= '';}?>
-
                       <style>#tab<?php echo $per; ?>_<?php echo $vkl; ?>:checked~.pricelist__tab-titles label[for="tab<?php echo $per; ?>_<?php echo $vkl; ?>"]{background: #F63D71;color: #fff;cursor: default;}</style>
-
-
                       <input type="radio" id="tab<?php echo $per; ?>_<?php echo $vkl; ?>" name="tab-group<?php echo $per; ?>" <?php echo $checked; ?>>
 
-                      <section class="pricelist__tab-content">
+                      <section class="pricelist__tab-content  pricelist__tab-content<?php echo $per; ?>">
                         <?php  
                           $stolbecz_1s = $vkladka['stolbecz_1'];
                           if($stolbecz_1s):                      
@@ -553,7 +553,7 @@ get_header();
       <div class="recall">
         <div class="wrap">
           <div class="recall__div">
-            <h2 class="titles recall__title">Отзывы о клинике</h2>
+            <h2 class="titles recall__title">Отзывы о&nbsp;клинике</h2>
 
             <div class="recall__slider">
               <?php
@@ -645,7 +645,7 @@ get_header();
 
         <div class="contactes__left">
 
-          <h2 class="titles">Контактные данные</h2>
+          <h2 class="titles contactes__titles">Контактные данные</h2>
           <?php 
             $kontakty = get_field('kontakty');
             $emails = $kontakty['emails']; //p

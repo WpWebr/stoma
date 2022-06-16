@@ -99,6 +99,20 @@ $('.more__slider').slick({
   dots: false,//навигационные точки
   centerMode: true,//главный слайд по центру экрана
   variableWidth: false,//слайды без пробелов по своей ширине
+  responsive: [
+    {
+      breakpoint: 970,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 730,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
 });
 
 

@@ -1189,6 +1189,7 @@ a.contactes__button {
 }
 .recall__slider.slick-initialized .slick-slide.slider__item{
   display: flex;
+  position: relative;
   min-width: 0;
   padding: 10px 33px 10px 60px ;
   height: 350px;
@@ -1568,7 +1569,6 @@ a.contactes__button {
 }
 .pricelist__tab-title {
   display: block;
-  height: 52px;
   background: #fff;
   padding: 13px 15px;
   font-size: 22px;
@@ -1593,7 +1593,7 @@ label.pricelist__tab-title + label{
 .pricelist__tab-content {
   display: none;
   justify-content: space-between;
-  padding: 82px 0 0;
+  padding-top: 82px;
 }
 
 .pricelist__tabs input:checked+.pricelist__tab-content {
@@ -1637,7 +1637,8 @@ label.pricelist__tab-title + label{
 }
 header,
 footer{
-  display: none;
+  /* display: none; */
+  overflow: hidden;
 }
 #cosmetologia .results .wrap,
 #cosmetologia .cosmetologia-menu .wrap,
@@ -1749,7 +1750,32 @@ footer{
   .pricelist__div-title{
     max-width: 470px;
   }
+  .pricelist__column{
+    max-width: 475px;
+  }
   /* end Перечень услуг и стоимость */
+  /* Срочно нажимать здесь */
+  .screw__form .inf_forms.vspl_form .right {
+    width: 674px;
+  }
+  .screw__form .inf_forms.vspl_form .sender input {
+    width: 220px;
+  }
+  .screw__form .inf_forms.vspl_form .sender button {
+    width: 253px;
+  }
+  .screw__form .link_ns span {
+    font-size: 19px;
+  }
+  /* end Срочно нажимать здесь */
+  /* Дополнительные разделы */
+  .more__div{
+    padding: 8px 12px;
+  }
+  .more__content{
+    padding: 18px 34px 28px;
+  }
+  /* end Дополнительные разделы */
 }
 
 @media (max-width: 970px){
@@ -1817,7 +1843,6 @@ footer{
   .results__slider {
     max-width: 380px;
   }
-
   /* end Результаты контурной пластики */
   /* Выполненные работы */
   #cosmetologia .media__slider .slick-next {
@@ -1836,6 +1861,8 @@ footer{
   }
   .pricelist_1 .pricelist__img {
     right: 5px;
+    border-radius: 0 0 108px 0;
+    overflow: hidden;
   }
   .pricelist__tab-titles{
     max-width: 720px;    
@@ -1858,7 +1885,87 @@ footer{
     margin: -1px 0 0;
   }
   /* end Перечень услуг и стоимость */
+  /* Срочно нажимать здесь */
+  .screw__form .inf_forms.vspl_form .right {
+    width: 634px;
+  }
+  .screw__form .inf_forms.vspl_form .sender input {
+    width: 199px;
+  }
+  .screw__form .inf_forms.vspl_form .left {
+    display: block;
+  }
+  .screw__form  .scre__ico {
+    margin-left: 411px;
+  }
+  .screw__form  .scre__img {
+    top: -8px;
+    left: 8px;
+  }
+  /* end Срочно нажимать здесь */
+  /* Отзывы о клинике */
+  .recall__slider .slick-arrow{
+    width:190px;
+    font-size: 19px;
+    text-align: left;
+  }
+  .recall__prev.recall__prev{
+    padding: 0 0 0 80px;
+  }
+  .recall__slider .slick-arrow::after{
+    margin-left: -87px;
+    background-size: contain;
+    width: 48px;
+  }
+  .recall__next.recall__next::after {
+    margin-left: 37px;
+  }
+  .slick-slider .slick-arrow.slick-next{
+    padding: 0 15px 0 15px;
+  }
+  .recall__slider .slick-prev {
+    right: 198px;
+    text-align: right;
+    padding: 0 10px 0 40px;
+  }
+  .recall__slider.slick-initialized .slick-slide.slider__item{
+    padding: 10px 33px 10px 42px;
+  }
+  
+  .recall__right{
+    position: absolute;
+    right: -22px;
+  }
+  .recall__text {
+    padding-right: 250px;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  /* end Отзывы о клинике */
+  /* Дополнительные разделы */
+  .more__content {
+    padding: 18px 95px 28px;
+  }
+  #cosmetologia .more__slider .slick-next {
+    right: calc(-7% - 59px);
+  }
+  #cosmetologia .more__slider .slick-prev {
+    left: calc(-7% - 59px);
+  }  
+  /* end Дополнительные разделы */
+  /* Контактные данные */
+  .contactes__right {
+    width: 45%;
+  }
+  .contactes__left{
+    width: 55%;
+  }
+  .contactes__content {
+    margin: 24px 0 0;
+  }
+  /* end Контактные данные */
 }
+
 @media (max-width: 730px){
   h1.titles {
     font-size: 26px;
@@ -1930,7 +2037,6 @@ footer{
     font-size: 15px;
   }
    /* end содержание страницы */
-
    /* Что такое контурная пластика? */
    .what__img {
     margin: 0 0 10px;
@@ -1940,10 +2046,6 @@ footer{
     margin: 40px 0 0;
   }
    /* end Что такое контурная пластика? */
-
-  /* Разновидности контурной пластики */
-
-  /* end Разновидности контурной пластики */
   /* Как проходит имплантация? */
   .implantation__div{
     flex-wrap: wrap;
@@ -2069,6 +2171,9 @@ footer{
   .doctors__titles{
     text-align: center;
   }
+  .pricelist__title{
+    padding: 20px 0 0;
+  }
   .list_all_vr.slider_vr .item {
     margin: 20px auto 80px !important;
   }
@@ -2077,9 +2182,223 @@ footer{
   }
   /* end Врачи проводившие  */
   /* Перечень услуг и стоимость */
-  
+  .pricelist__div-title {
+    flex-direction: column-reverse;
+  }
+  .pricelist__button{
+    margin: -97px 0 40px;
+    width: 230px;
+    height: 49px;
+    font-size: 19px;
+    line-height: 1;
+  }
+  .pricelist__tab-titles {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .pricelist__tab-title {
+    width: 100%;
+    font-size: 16px;
+    padding: 7px 15px;
+  }
+  .pricelist__tab-title:first-child{
+    border-radius: 0 18px 0 0;
+  }
+  .pricelist__tab-title:last-child {
+    border-radius: 0 0 0 18px;
+  }
+  label.pricelist__tab-title + label {
+    border-left: 0;
+    border-top: 1px solid #F63D71;
+  }
 
+  .pricelist__column{
+    margin: 0;
+    font-size: 16px;
+  }
+  .pricelist__line{
+    padding: 8px 15px;
+  }
+  .pricelist__line-right{
+    max-width: 85px;
+    text-align: right;
+  }
   /* end Перечень услуг и стоимость */
+  /* Срочно нажимать здесь */
+  .screw .screw__form {
+    margin: 10px 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .screw__form .inf_forms.vspl_form .right {
+    width: 267px;
+    margin: 0 0 20px;
+  }
+  .screw__form .scre__inner.inner.clrfx{
+    padding: 0px!important;
+    max-width: 300px;
+  }
+  .screw__form .inf_forms.vspl_form .left {
+    display: none;
+  }
+  .screw .screw__title{
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: left;
+    padding: 15px 0 0 10px;
+  }
+  .screw .screw__art{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 55px;
+  }
+  .screw .screw__text {
+    text-align: left;
+    padding: 0 0 0 10px;
+  }
+  .screw__form .inf_forms.vspl_form .sender button,
+  .screw__form .inf_forms.vspl_form .sender input {
+    width: 97%;
+    float: inherit;
+  }
+  .scre .link_ns.big {
+    line-height: 1;
+  }
+  /* end Срочно нажимать здесь */
+  /* Отзывы о клинике */
+  .recall__div {
+    margin: 50px 0 0;
+  }
+  .recall__slider {
+    margin: 90px 0 0;
+  }
+  .recall__title{
+    text-align: center;
+  }
+  .recall__slider .slick-arrow {
+    width: 132px;
+    top: -65px;
+    font-size: 14px;
+    height: 50px;
+  }
+  .recall__slider .slick-prev{
+    right: 165px;
+  }
+  .recall__slider .slick-arrow::after{
+    margin-top: -7px;
+  }
+  .recall__prev.recall__prev::after{
+    margin-left: -56px;
+  }
+  .recall__next.recall__next::after{
+    margin-left: 7px;
+  }
+  .recall__slider .slick-arrow.slick-next {
+    padding: 0px 56px 2px 15px;
+  }
+  .recall__slider .slick-prev{
+    padding: 0 10px 2px 34px;
+  }
+  .recall__slider.slick-initialized .slick-slide.slider__item {
+    padding: 10px 15px 92px;
+  }
+  .recall__right {
+    position: absolute;
+    right: -2px;
+  }
+  .recall__left {
+    padding: 0;
+    max-width: 280px;
+    overflow: hidden;
+
+  }
+  .recall__text {
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .recall__img{
+    position: absolute;
+    z-index: 2;
+    top: 257px;
+    right: 7px;
+    overflow: hidden;
+  }
+  .recall__img img {
+    margin: 0px 0px -55px 0px;
+    max-width: 107px;
+    max-height: inherit;
+  }
+  .recall__button{
+    position: absolute;
+    bottom: -325px;
+    text-align: left;
+    padding: 0 0 0 30px;
+  }
+  /* end Отзывы о клинике */
+  /* Дополнительные разделы */
+  .more__div {
+    padding: 8px 12px;
+    margin: 50px 0 0;
+  }
+  .more__title{
+    text-align: center;
+  }
+  .more__content {
+    padding: 18px 47px 28px;
+    overflow: inherit;
+  }
+  #cosmetologia .more__slider .slick-arrow {
+    top: 156px;
+    width: 40px;
+    height: 40px;
+  }
+  #cosmetologia .more__slider .slick-arrow::after {
+    width: 18px;
+    height: 31px;
+    left: 14px;
+    top: 4px;
+    background-size: contain;
+  }
+  #cosmetologia .more__slider .slick-prev {
+    left: -59px;
+  }
+  #cosmetologia .more__slider .slick-next {
+    right: -59px;
+  }
+  /* end Дополнительные разделы */
+  /* Контактные данные */
+  h2.contactes__titles{
+    text-align: center;
+    color: #202020;
+    font-size: 26px;
+  }
+  .contactes__div{
+    flex-wrap: wrap;
+  }
+  .contactes__left{
+    width: 100%;
+    padding: 0;
+  }
+  .contactes__right{
+    width: 100%;
+    margin: 40px 0 0;
+  }
+  .contactes__button{
+    position: relative;
+    margin: 30px 0 0;
+  }
+  .contactes__dan{
+    width: 100%;
+  }
+  .contactes__address{
+    margin: 33px 0 0;
+  }
+  .contactes__social {
+    margin: 33px 0 0;
+  }
+  /* end Контактные данные */
 }
 
 
