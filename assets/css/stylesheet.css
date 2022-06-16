@@ -1,0 +1,24 @@
+
+@font-face {
+    font-family: 'PF Regal Display Pro';
+    src: url('../fonts/PFRegalDisplayPro-Medium.eot');
+    src: local('PFRegalDisplayPro-Medium'),
+    url('../fonts/PFRegalDisplayPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PFRegalDisplayPro-Medium.woff2') format('woff2'),
+    url('../fonts/PFRegalDisplayPro-Medium.woff') format('woff'),
+    url('../fonts/PFRegalDisplayPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PF Regal Display Pro';
+    src: url('../fonts/PFRegalDisplayPro-MediumItalic.eot');
+    src: local('PFRegalDisplayPro-MediumItalic'),
+        url('../fonts/PFRegalDisplayPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFRegalDisplayPro-MediumItalic.woff2') format('woff2'),
+        url('../fonts/PFRegalDisplayPro-MediumItalic.woff') format('woff'),
+        url('../fonts/PFRegalDisplayPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
