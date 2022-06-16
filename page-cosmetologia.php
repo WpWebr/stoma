@@ -364,8 +364,8 @@ get_header();
     if ($lekars): ?>  
     <div class="doctors">
       <div class="wrap">
-        <div class="comand-lib comand-lib_m">
-          <h2 class="titles">Врачи проводившие <br>лечение</h2>
+        <div class="doctors__comand-lib comand-lib">
+          <h2 class="titles doctors__titles">Врачи проводившие <br>лечение</h2>
           <div class="comand-lib_slid">
             <?php get_template_part( 'inc/comand_lib', null, $lekars );?>
           </div>
@@ -393,7 +393,7 @@ get_header();
                 <h2 class="titles pricelist__title"><?php echo $zagolovok; ?></h2>
                 <a class="pricelist__button link_ns" data-fancybox="" data-src="#form_zvon" href="javascript:;">
                   <div class="ico"></div>
-                  <span>Записаться на приём</span>
+                  <span>Записаться на&nbsp;приём</span>
                 </a>        
               </div>
 

@@ -82,6 +82,15 @@ $('.media__slider').slick({
   dots: true,//навигационные точки
   centerMode: true,//главный слайд по центру экрана
   variableWidth: false,//слайды без пробелов по своей ширине
+  responsive: [
+    {
+      breakpoint: 970,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
 });
 
 $('.more__slider').slick({
@@ -102,6 +111,20 @@ $('#results').slick({
   draggabal: false,//свайп мышкой на пк
   swipe: false,//свайп мышкой на мобильных устройствах
   infinite: false,//бесконечная прокрутка
+  responsive: [
+    {
+      breakpoint: 1180,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 970,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
 });
 
 $('.recall__slider').slick({
