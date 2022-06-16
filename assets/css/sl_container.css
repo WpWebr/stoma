@@ -658,14 +658,7 @@ button.slick-disabled:hover{
 }
 /* end cosmetologia-menu */
  .what__div{
-   display: flex;
    margin: 63px 0 0;
- }
- .what__left{
-   max-width: 560px;
- }
- .what__right{
-   padding: 0 0 0 40px;
  }
 
 /* what */
@@ -682,7 +675,9 @@ button.slick-disabled:hover{
   width: 50%;
 }
 .what__img{
-  max-width: 560px;
+  float: left;
+  max-width: 50%;
+  margin: 0 40px 20px 0;
 }
 .what__img img{
   width: 100%;
@@ -759,7 +754,7 @@ button.slick-disabled:hover{
   padding: 70px 0 0;
 }
 .prescription_m{
-  margin: 100px 0 0;
+  margin: 80px 0 0;
 }
 .prescription__div{
   display: flex;
@@ -1398,7 +1393,7 @@ a.contactes__button {
 .results__view p{
   position: absolute;
   right: 26px;
-  bottom: 18px;
+  bottom: 46px;
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
@@ -1629,10 +1624,19 @@ label.pricelist__tab-title + label{
  /* end Перечень услуг и стоимость */
 
 /* временные */
-.kind .wrap{
+#cosmetologia .wrap{
   overflow: hidden;
 }
-
+header,
+footer{
+  display: none;
+}
+#cosmetologia .results .wrap,
+#cosmetologia .cosmetologia-menu .wrap,
+#cosmetologia .plastic .wrap,
+#cosmetologia .prescription .wrap{
+  overflow:inherit;
+}
 /* end временные  */
 /* end cosmetologia */
 
@@ -1654,15 +1658,320 @@ label.pricelist__tab-title + label{
 /* end Разновидности контурной пластики */
 
 
+#cosmetologia img{
+  height: auto;
+}
 
+@media (max-width: 1180px){
+  .bot_start_bg{
+    overflow: inherit;
+  }
+  h1.titles {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+  h2.titles {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  h3.titles{
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  /* 1 бок */
 
+  .plastic__left {
+    min-width: 55%;
+    margin: 54px 0 0;
+  }
+  .plastic__sub {
+    margin: 40px 0 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .plastic__button {
+    font-size: 20px;
+  }  
+  /* end 1 блок */
+  /* Как проходит имплантация? */
+  .implantation__left {
+    min-width: 40%;
+  }
+  .implantation__img {
+    max-width: inherit;
+    width: auto;
+    max-height: inherit;
+    border-radius: 20px;
+    opacity: inherit;
+    overflow: hidden;
+  }
+  .implantation__left img {
+    width: auto;
+  }
+  .implantation__right {
+    width: auto;
+  }
+  /* end Как проходит имплантация? */
+  /* Рекомендации до и после пластики */
+  .prescription__left {
+    width: 50%;
+  }
+  .prescription__right {
+    width: auto;
+    padding: 0 0 0 20px;
+  }
+  .prescription__attention{
+    left: 5%;
+    width: 94%;
+  }
+  /* end Рекомендации до и после пластики */
+  /* Результаты контурной пластики */
+  .results__slider {
+    margin: 30px auto 0;
+    max-width: 762px;
+  }
+  .results__title{
+    text-align: center;
+  }
+  /* end Результаты контурной пластики */
+}
 
+@media (max-width: 970px){
+  h2.titles {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  h3.titles{
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  /* 1 бок */
+  .titles {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .plastic__left {
+    margin: 32px 0 0;
+  }
+  .plastic__sub {
+    margin: 25px 0 0;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .plastic__button {
+    font-size: 18px;
+  }
+  .plastic__button {
+    width: 344px;
+  }
+  /* end 1 блок */
+  .what__img {
+    margin: 10px 40px 20px 0;
+  }
+    /* Рекомендации до и после пластики */
+  .prescription__left{
+    width: inherit;
+  }
+  .prescription__attention{
+    bottom: inherit;
+    font-size: 14px;
+    top: 285px;
+  }
+  .acor__label {
+    font-size: 18px;
+  }
+  .acor__item{
+    font-size: 15px;
+    margin: 15px 0 0 37px;
+  }
+  .prescription__right{
+    min-width: 380px;
+  }
+  .acor__label::before{
+    background-size: contain;
+    width: 30px;
+  }
+  .acor__item::before{
+    background-size: contain;
+    width: 27px;
+    left: -40px;
+  }
+  /* end Рекомендации до и после пластики */
+  /* Результаты контурной пластики */
+  .results__slider {
+    max-width: 380px;
+  }
 
+  /* end Результаты контурной пластики */
 
+}
+@media (max-width: 730px){
+  h1.titles {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+  h2.titles {
+    font-size: 24px;
+  }
+  h3.titles{
+    font-size: 20px;
+  }
+  /* 1 бок */
+  .plastic__left {
+    min-width: 60%;
+    margin: 12px 0 0;
+  }
+  .plastic__div{
+    position: relative;
+  }
+  .plastic__right {
+    position: absolute;
+    top: 27px;
+    right: -17px;
+    width: 35%;
+  }
+  .plastic__left {
+    min-width: 100%;
+  }
+  .plastic__sub {
+    width: 260px;
+    margin: 18px 0 0 auto;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+  .plastic__button {
+    display: block;
+    width: 260px;
+    margin: 20px auto 0;
+    font-size: 17px;
+    height: 50px;
+    line-height: 1;
+  }
+  /* end 1 блок */
+  /* содержание страницы */
+  .cosmetologia-menu__cont {
+    width: 106%;
+    margin: 0 calc(-3px - 3%);
+    padding: 3px 6px;
+  }
+  .cosmetologia-menu__div {
+    border: 1px solid rgba(246, 61, 113, 0.1);
+    border-radius: 10px;
+    padding: 16px 4px 10px;
+  }
+  .cosmetologia-menu__div ul {
+    column-count: 1;
+  }
+  .soderzhanie__title{
+    text-align: center;
+    font-size: 22px;
+  }
+  .plastic-menu__link::before {
+    width: 23px;
+    height: 20px;
+    left: -37px;
+    background-size: contain;
+  }
+  .plastic-menu__link a {
+    font-size: 15px;
+  }
+   /* end содержание страницы */
 
+   /* Что такое контурная пластика? */
+   .what__img {
+    margin: 0 0 10px;
+    max-width: 100%;
+  }
+  .what__div {
+    margin: 40px 0 0;
+  }
+   /* end Что такое контурная пластика? */
 
+  /* Разновидности контурной пластики */
 
-
+  /* end Разновидности контурной пластики */
+  /* Как проходит имплантация? */
+  .implantation__div{
+    flex-wrap: wrap;
+    margin: 20px 0 0;
+  }
+  h2.implantation__title{
+    font-size: 22px;
+    text-align:center; 
+    }
+  .implantation__left{
+    min-width: 100%;
+  }
+  .implantation__right{
+    padding: 6px 0 0;
+  }
+  #cosmetologia .implantation__img img{
+    height: 167px;
+  }
+  .implantation__num{
+    font-size: 28px;
+  }
+  .implantation__text{
+    padding: 0 0 0 8px;
+  }
+  .implantation__punct{
+    padding: 8px 22px 10px 8px;
+  }
+  /* end Как проходит имплантация? */
+  /* Рекомендации до и после пластики */
+  .prescription__div{
+    flex-direction: column;
+    position: relative;
+  }
+  .prescription__right,
+  .prescription__left{
+    padding: 0;
+  }
+  .prescription__title{
+    position: absolute;
+    top: -75px;
+  }
+  .prescription__attention {
+    top: 212px;
+    width: auto;
+    left: 0;
+  }
+  .prescription__right {
+    min-width: auto;
+  }
+  .prescription__akkord {
+    margin: 80px 0 0;
+  }
+  /* end Рекомендации до и после пластики */
+  /* Результаты контурной пластики */
+  .view.results__view img, .results__container {
+    width: 236px;
+    height: 363px;
+    border-radius: 10px 10px 0 0;
+  }
+  .results__text {
+    width: 236px;
+    height: 46px;
+    font-size: 16px;
+  }
+  .results__view p{
+    bottom: 20px;
+    font-size: 18px;
+  }
+  .results__slider .slick-arrow{
+    top: 164px;
+  }
+  .results__slider {
+    max-width: 240px;
+  }
+  .results__slider .slick-dots li {
+    margin: 0 10px;
+  }
+  .results__slider .slick-dots{
+    margin: 18px 0 0;
+  }
+  /* end Результаты контурной пластики */
+}
 
 
 

@@ -24,7 +24,7 @@ get_header();
     <div class="wrap">
       <div class="plastic__div">
         <div class="plastic__left">
-          <h1 class="titles plastic__title"> Контурная пластика лица с гарантией <span class="akcent">естественного результата </span> за 60 минут </h1>
+          <h1 class="titles plastic__title"> Контурная пластика лица с&nbsp;гарантией <span class="akcent">естественного результата </span> за&nbsp;60&nbsp;минут </h1>
           <p class="plastic__sub">Для  коррекции вашей внешности, необходим осмотр у специалиста. Избежать разочарования просто - запишитесь на консультацию</p>
           <a class="plastic__button link_ns" data-fancybox="" data-src="#form_zvon" href="javascript:;">
             <div class="ico"></div>
@@ -65,20 +65,16 @@ get_header();
     <?php endif; 
   ?>
 
-  
-
-
   <!-- Что такое контурная пластика?  -->
   <div class="what">
     <div class="wrap">
       <div class="what__div">
-        <div class="what__left">
+
           <div class="what__img">
             <?php get_template_part( 'inc/image', null, ['foto_2','',560,317] );?> 
           </div>
-        </div>
-        <div class="what__right">
-          <h2 class="titles what__title">Что такое контурная пластика?</h2>
+
+          <h2 class="titles what__title">Что такое контурная&nbsp;пластика?</h2>
           <div class="what__text">
             <p>
               <span class="akcent">“Необходима костная пластика”</span> — это слышат многие пациенты, которые планируют имплантацию. Такое заключение может сделать стоматолог-имплантолог, ознакомившись с результатами компьютерной томографии.
@@ -89,14 +85,14 @@ get_header();
             </p>
           </div>
 
-        </div>
+
       </div>
     </div>
   </div>
   <!-- Разновидности контурной пластики -->
   <div class="kind">
     <div class="wrap">
-      <h2 class="titles kind__titl">Разновидности контурной пластики</h2>
+      <h2 class="titles kind__titl">Разновидности контурной&nbsp;пластики</h2>
       <div class="kind__div">
         <div class="circle">
 
@@ -194,7 +190,7 @@ get_header();
           </div>
         </div>
         <div class="prescription__right">
-          <h2 class="prescription__title titles">Рекомендации до и после пластики</h2>
+          <h2 class="prescription__title titles">Рекомендации до и&nbsp;после&nbsp;пластики</h2>
           <div class="prescription__akkord">
 
 
