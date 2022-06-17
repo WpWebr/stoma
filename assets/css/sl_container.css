@@ -1431,7 +1431,7 @@ a.contactes__button {
   text-align: center;
 }
 .kind__div{
-  padding: 30px 10px 100px;
+  margin: 30px 0 100px;
 }
 .circle{
   display: flex;
@@ -1461,24 +1461,32 @@ a.contactes__button {
   border-radius: 50%;
   background-color: #fff;
   transform: translate(-15px, -15px);
+  animation-name: color;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;  
 }
-
+.sputnik:hover{
+  z-index: 9;
+  cursor: pointer;
+  border: 7px solid rgba(246, 61, 113, 0.3);
+ }
 .sputnik p{
   display: flex;
   opacity: 0;
   margin: 0 0 0 40px;
-  min-width: 379px;
+  min-width: 18vw;
   background: #FFFFFF;
   border: 1px solid rgba(246, 61, 113, 0.3);
   border-radius: 10px;
   padding: 10px;
-  /* animation: opacity 5s ease-out .7s infinite; */
   animation-name: opacity;
-  /* animation-duration: 8s; */
   animation-timing-function: ease-out;
-  /* animation-delay: 2s; */
   animation-iteration-count: infinite;  
 }
+.sputnik:hover p{
+  opacity: 1;
+  animation: none;  
+ }
 .sputnik_right p::before, 
 .sputnik_right p::after {
   content: '';
@@ -1493,16 +1501,16 @@ a.contactes__button {
   left: 9px;
  }
  .sputnik_left p{
-  transform: translateX(-430px);
+  transform: translateX(calc(-18vw - 50px));
   margin: 0;
  }
- .sputnik_left p::before, 
+ .sputnik_left p::before,
  .sputnik_left p::after {
   content: '';
   position: absolute;
   left: inherit;
   right: -33px;
-  bottom: 34px;
+  top: calc(50% - 10px);
   border: 10px solid transparent;
   border-left: 23px solid rgba(246, 61, 113, 0.3);
  }
@@ -1510,14 +1518,6 @@ a.contactes__button {
   border-left: 22px solid white;
   left: inherit;
   right: -31px;
- }
- .sputnik:hover{
-  z-index: 9;
-  cursor: pointer;
- }
- .sputnik:hover p{
-  opacity: 1;
-  animation: none;  
  }
  /* end Разновидности контурной пластики */
 
@@ -1641,35 +1641,37 @@ footer{
   overflow: hidden;
 }
 #cosmetologia .results .wrap,
+#cosmetologia .kind .wrap,
 #cosmetologia .cosmetologia-menu .wrap,
 #cosmetologia .plastic .wrap,
 #cosmetologia .prescription .wrap{
-  overflow:inherit;
+  overflow:unset;
 }
 /* end временные  */
 /* end cosmetologia */
 
-
-
-
-
-
-
+#cosmetologia img{
+  height: auto;
+}
 
 /* ******* media ******* */
 
 /* Разновидности контурной пластики */
-/* @media (max-width: 1580px) {
-  .sputnik p{
-    min-width: 24vw;
+@media (max-width: 1360px){
+  .circle{
+    width: 40vw;
+    height: auto;
+    padding: 2.7vw;
   }
-} */
+  .circle .circle{
+    padding: 2.4vw;
+  }
+  .circle img{
+    width: 34.4vw;
+  }
+}
 /* end Разновидности контурной пластики */
 
-
-#cosmetologia img{
-  height: auto;
-}
 
 @media (max-width: 1180px){
   .bot_start_bg{
@@ -1810,7 +1812,7 @@ footer{
   .what__img {
     margin: 10px 40px 20px 0;
   }
-    /* Рекомендации до и после пластики */
+  /* Рекомендации до и после пластики */
   .prescription__left{
     width: inherit;
   }
@@ -1965,7 +1967,6 @@ footer{
   }
   /* end Контактные данные */
 }
-
 @media (max-width: 730px){
   h1.titles {
     font-size: 26px;
@@ -2037,6 +2038,47 @@ footer{
     font-size: 15px;
   }
    /* end содержание страницы */
+   /* Разновидности контурной пластики */
+   .kind__titl {
+    margin: 50px auto 0;
+  }
+  .kind__div{
+    position: relative;
+    margin: 30px 0 50px;
+  }
+  .circle img{
+    width: 180px;
+  }
+  .circle{
+    width: 225px;
+    padding: 19.7px;
+  }
+  .circle .circle{
+    padding: 17.4px;
+  }
+  .sputnik p {
+    position: absolute;
+    display: block;
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 35px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .sputnik_left p{
+    transform: none;
+  }
+  .sputnik_left p::before,
+  .sputnik_left p::after{
+    display: none;
+  }
+  .sputnik_right p::before,
+  .sputnik_right p::after{
+    display: none;
+  }
+   /* end Разновидности контурной пластики */
    /* Что такое контурная пластика? */
    .what__img {
     margin: 0 0 10px;
@@ -2075,6 +2117,9 @@ footer{
   }
   /* end Как проходит имплантация? */
   /* Рекомендации до и после пластики */
+  .prescription_m {
+    margin: 50px 0 0;
+  }
   .prescription__div{
     flex-direction: column;
     position: relative;
@@ -2100,7 +2145,11 @@ footer{
   }
   /* end Рекомендации до и после пластики */
   /* Результаты контурной пластики */
-  .view.results__view img, .results__container {
+  .results__div{
+    margin: 50px 0 0;
+  }
+  .view.results__view img, 
+  .results__container {
     width: 236px;
     height: 363px;
     border-radius: 10px 10px 0 0;
@@ -2139,6 +2188,7 @@ footer{
   }
   .media__div-title{
     flex-direction: column-reverse;
+    margin: 50px 0 0;
   }
   #cosmetologia .media__img {
     height: 200px;
@@ -2175,7 +2225,7 @@ footer{
     padding: 20px 0 0;
   }
   .list_all_vr.slider_vr .item {
-    margin: 20px auto 80px !important;
+    margin: 20px auto 60px !important;
   }
   .doctors .item.slick-slide {
     width: 260px !important;
@@ -2376,6 +2426,8 @@ footer{
   }
   .contactes__div{
     flex-wrap: wrap;
+    margin: 50px 0 0;
+    padding: 0;
   }
   .contactes__left{
     width: 100%;

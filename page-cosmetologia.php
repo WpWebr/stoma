@@ -95,21 +95,40 @@ get_header();
       <div class="kind__div">
         <div class="circle">
 
-          <div class="circle">
+          <div class="circle circle_circle">
             <img class="kind__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/zub.png" alt="зуб" width="536" height="536" >
           </div>
 
           <?php
             $sputniks =  get_field('sputniks');
             if($sputniks):
-                $width = 690/2;
-                $timp = 8;//длительность показа
-                $pause = count($sputniks)*$timp;//длительность цикла
-                $proz = round(100/count($sputniks),1);//процент показа от общей длительности округленный до 1 знака после,
-                $top = 60;//шаг отступа с верху
-                ?>
+              $width = 346;
+              $width_vw = 22.9;//234
+              $width_px = 135;// для @730
+              $timp = 8;//длительность показа
+              $pause = count($sputniks)*$timp;//длительность цикла
+              $proz = round(100/count($sputniks),1);//процент показа от общей длительности округленный до 1 знака после,
+              $top = 60;//шаг отступа с верху
+              $top_vw = 4.4;
+              $top_px = 25;
+              ?>
 
-              <style>@keyframes opacity{0%{opacity:0;}<?php echo 3*$proz/10; ?>%{opacity:1;}<?php echo 7*$proz/10; ?>%{opacity:1;}<?php echo $proz; ?>%{opacity:0;}}</style>
+              <style>
+              @keyframes opacity{
+                0%{
+                  opacity:0;  
+                  }
+                <?php echo 3*$proz/10; ?>%{
+                  opacity:1;
+                  }
+                <?php echo 7*$proz/10; ?>%{
+                  opacity:1;
+                  }
+                <?php echo $proz; ?>%{
+                  opacity:0;
+                  }
+                }
+                </style>
 
               <?php
               foreach ($sputniks as $key => $sputnik):
@@ -120,20 +139,48 @@ get_header();
                 $tim = $key*$timp;//длительность задержки
 
                 if($tops): 
-                  $top = 60*$tops + 60;//отступ с верху 
+                  $top = 60*$tops + 60;//отступ с верху
+                  $top_vw = 4.4*$tops + 4.4;
+                  $top_px = 25*$tops + 25;
                 endif;
 
-                $left = round(sqrt($width*$top*2 - $top**2)+$width,2);//отступ с лева 
+                $left = round(sqrt($width*$top*2 - $top**2)+$width,2);//отступ с лева
+                $left_vw = round(sqrt($width_vw*$top_vw*2 - $top_vw**2)+$width_vw,2);
+                $left_px = round(sqrt($width_px*$top_px*2 - $top_px**2)+$width_px,2);
 
                 if($side == 'left'): 
-                  $left=($width*2 - $left); 
+                  $left=round($width*2 - $left,2);
+                  $left_vw=round($width_vw*2 - $left_vw,2);
+                  $left_px=round($width_px*2 - $left_px,2);
                   $sputnik = 'sputnik_left'; 
                 else: 
                   $sputnik = 'sputnik_right'; 
                 endif;
                 ?>
+                <style>
+                  .sputnik.<?php echo $sputnik; ?>_<?php echo $key; ?>{
+                    left:<?php echo $left; ?>px;
+                    top:<?php echo $top; ?>px;
+                  }
+                  @media (max-width: 1360px){
+                    .sputnik.<?php echo $sputnik; ?>_<?php echo $key; ?>{
+                      left:<?php echo $left_vw; ?>vw;
+                      top:<?php echo $top_vw; ?>vw;
+                    }
+                  }
+                  @media (max-width: 730px){
+                    .sputnik.<?php echo $sputnik; ?>_<?php echo $key; ?>{
+                      left:<?php echo $left_px; ?>px;
+                      top:<?php echo $top_px; ?>px;
+                    }
+                    .sputnik.<?php echo $sputnik; ?>_<?php echo $key; ?> p{
+                      left:calc(29px - <?php echo $left_px; ?>px);
+                      top:calc(29px - <?php echo $top_px; ?>px);
+                    }
+                  }
+                </style>
 
-                <div class="sputnik <?php echo $sputnik; ?>" style="left:<?php echo $left; ?>px; top:<?php echo $top; ?>px;">
+                <div class="sputnik <?php echo $sputnik; ?> <?php echo $sputnik; ?>_<?php echo $key; ?>">
                   <p class="circle__remark" style="animation-delay: <?php echo $tim; ?>s; animation-duration: <?php echo $pause; ?>s;" >
                     <?php echo $text; ?>
                   </p>
