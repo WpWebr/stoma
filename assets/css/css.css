@@ -772,17 +772,13 @@ input.zagruska{
 .clear{
   clear:both;
 }
+.akcent_span>span{
+  color: #F63D71;
+}
 .akcent{
   color: #F63D71;
 }
 /* end lib */
-
-
-
-
-
-
-
 
 
 

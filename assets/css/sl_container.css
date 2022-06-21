@@ -1654,6 +1654,39 @@ footer{
   height: auto;
 }
 
+
+
+
+
+
+
+
+
+
+
+/* vacancies  Вакансии*/
+/* 1 блок */
+
+
+
+
+
+/* end 1 блок */
+
+/* end vacancies  Вакансии*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ******* media ******* */
 
 /* Разновидности контурной пластики */
@@ -1671,7 +1704,6 @@ footer{
   }
 }
 /* end Разновидности контурной пластики */
-
 
 @media (max-width: 1180px){
   .bot_start_bg{
@@ -1734,6 +1766,9 @@ footer{
   .prescription__attention{
     left: 5%;
     width: 94%;
+  }
+  .acor__label{
+    font-size: 24px;
   }
   /* end Рекомендации до и после пластики */
   /* Результаты контурной пластики */
@@ -2140,7 +2175,7 @@ footer{
   .prescription__right {
     min-width: auto;
   }
-  .prescription__akkord {
+  .prescription__akkord-730 {
     margin: 80px 0 0;
   }
   /* end Рекомендации до и после пластики */
@@ -2455,15 +2490,3 @@ footer{
 
 
 
-/*До и После*/
-/* @media screen and (max-width: 600px) {
-  .sl-container {
-    width: 320px;
-    height: 210px;
-  }
-  .sl-container .view img {
-    width: 320px;
-    max-width: 320px;
-  }
-}     */
-  /*Конец До и После*/

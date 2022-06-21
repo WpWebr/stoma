@@ -41,29 +41,21 @@ get_header();
     </div>
   </div>
   <!-- Содержание страницы -->
-  <?php 
-    $menu = get_field('soderzhanie');
-    if($menu[0]):
-      ?>
+  <div class="cosmetologia-menu cosmetologia-menu-m">
+    <div class="wrap">
+      <div class="cosmetologia-menu__cont">
+        <div class="cosmetologia-menu__div">
+          <h3 class="titles soderzhanie__title">Содержание страницы:</h3>
 
-      <div class="cosmetologia-menu cosmetologia-menu-m">
-        <div class="wrap">
-          <div class="cosmetologia-menu__cont">
-            <div class="cosmetologia-menu__div">
-              <h3 class="titles soderzhanie__title">Содержание страницы:</h3>
+          <ul id="aside">
 
-              <ul id="aside">
-
-              </ul>
-
-            </div>
-          </div>
+          </ul>
 
         </div>
       </div>
 
-    <?php endif; 
-  ?>
+    </div>
+  </div>
   <!-- Что такое контурная пластика?  -->
   <div class="what">
     <div class="wrap">
@@ -75,13 +67,18 @@ get_header();
 
           <h2 class="titles what__title">Что такое контурная&nbsp;пластика?</h2>
           <div class="what__text">
-            <p>
-              <span class="akcent">“Необходима костная пластика”</span> — это слышат многие пациенты, которые планируют имплантацию. Такое заключение может сделать стоматолог-имплантолог, ознакомившись с результатами компьютерной томографии.
-            </p>
-            <p>Корни зуба находятся в костной ткани, и так обеспечивается их фиксация. Это позволяет человеку смело жевать пищу и не бояться расшатывания зубов. Однако после удаления зуба может произойти убыль кости.</p>
-            <p>
-              <span class="akcent">Имплант</span> — искусственный корень. И для его надежной фиксации также необходимо достаточное количество костной ткани. Поэтому проблемы ее нехватки встает очень остро перед проведением имплантации.
-            </p>
+            <?php 
+              $texts_3 = get_field('texts_3');
+              if ($texts_3):
+                foreach ($texts_3 as $text_3):
+                  ?>
+                  <p class="akcent_span">
+                    <?php echo $text_3['text_3']; ?>
+                  </p>
+                  <?php
+                endforeach;
+              endif; 
+            ?>
           </div>
 
 
@@ -231,56 +228,54 @@ get_header();
           <div class="prescription__img">
             <?php get_template_part( 'inc/image', null, ['foto_4','',615,508] );?>          
           </div>
-          <div class="prescription__attention">
-            <p>Более развернутые рекомендации, а также список необходимых лекарственных препаратов вам выдаст ваш врач после проведенной костной пластики.</p>
-          </div>
+          <?php $rekomendaczii = get_field('rekomendaczii'); 
+            if( $rekomendaczii ): 
+              ?>
+              <div class="prescription__attention">
+                <p><?php echo $rekomendaczii; ?></p>
+              </div>
+              <?php 
+             endif;
+            ?>
         </div>
         <div class="prescription__right">
           <h2 class="prescription__title titles">Рекомендации до и&nbsp;после&nbsp;пластики</h2>
-          <div class="prescription__akkord">
-
-
-            <div class="acor">
-
-              
-
-              <div class="acor__punct">
-                <input class="acor__input" id="acor1" type="radio" name="acor" checked="checked" />
-                <label class="acor__label" for="acor1">Рекомендации по проведению</label>
-                <div class="acor__body">
-                  <ul class="acor__list">
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                  </ul>
-                </div>                 
-              </div>
-
-
-
-
-              
-
-              <div class="acor__punct">
-                <input class="acor__input" id="acor2" type="radio" name="acor" />
-                <label class="acor__label" for="acor2">Противопоказания к проведению</label>
-                <div class="acor__body">
-                  <ul class="acor__list">
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                    <li class = "acor__item" >Jnkbxbtv jn ghtlsleob[ rjycnherwbq? zdkztncz rjycnherwbb yt cdzpfyyst lheu c lheujv/</li>
-                  </ul>
-                </div>                
-              </div>
-
-
-            </div>
-
-
-          </div>
-        
+          <?php
+            $rekoms = get_field('rekoms');
+            if($rekoms[0]):
+              foreach ($rekoms as $re => $rekomt):
+                $title = $rekomt['title'];
+                $rekom = $rekomt['rekom'];
+                ?>
+                <div class="prescription__akkord  <?php if ($re == 0) { echo 'prescription__akkord-730'; } ?>">
+                  <div class="acor"> 
+                    <div class="acor__punct">
+                      <input class="acor__input" id="acor<?php echo $re; ?>" type="radio" name="acor"
+                       <?php if ($re == 0) { echo 'checked="checked"'; } ?>/>
+                      <label class="acor__label" for="acor<?php echo $re; ?>">
+                        <?php if ($title) { echo $title; } ?>
+                      </label>
+                      <div class="acor__body">
+                        <ul class="acor__list">
+                          <?php                           
+                            if ($rekom):
+                              foreach ($rekom as $rek):                                
+                                $text = $rek['text'];
+                                ?>
+                                  <li class = "acor__item" ><?php echo $text; ?></li>
+                                <?php
+                              endforeach;
+                            endif;
+                          ?>
+                        </ul>
+                      </div>                 
+                    </div>
+                  </div>
+                </div>
+                <?php
+              endforeach;
+            endif;
+          ?>
         </div>
       </div>
     </div>
