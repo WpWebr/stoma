@@ -502,7 +502,7 @@ function my_scripts_method(){
     wp_enqueue_style( 'all', get_theme_file_uri( '/assets/css/css.css' ), array(), $d );
 
 
-    if( is_singular('stories') || is_page(33) ){
+    if( is_singular('stories') || is_page(33) || is_page(2133) ){
       wp_enqueue_style( 'sl-container', get_theme_file_uri( '/assets/css/sl_container.css' ), array(), $d );
   
       wp_enqueue_script('af-bt', get_theme_file_uri( '/assets/js/af-bt.js' ), array('jquery'), $d , true);
