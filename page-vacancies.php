@@ -102,7 +102,7 @@ get_header();
      <?php get_template_part( 'inc/image', null, ['foto_4_fon'] );?> 
     </div>    
   </div>
-  <!-- Перечень услуг и стоимость -->
+  <!-- Открытые вакансии -->
   <?php $perechens = get_field('perechen');
     if($perechens ):
       foreach ($perechens as $per => $perechen):
@@ -117,11 +117,7 @@ get_header();
             <div class="pricelist__div">
 
               <div class="pricelist__div-title">
-                <h2 class="titles pricelist__title"><?php echo $zagolovok; ?></h2>
-                <a class="pricelist__button link_ns" data-fancybox="" data-src="#form_zvon" href="javascript:;">
-                  <div class="ico"></div>
-                  <span>Записаться на&nbsp;приём</span>
-                </a>        
+                <h2 class="titles pricelist__title"><?php echo $zagolovok; ?></h2>      
               </div>
 
               <div class="pricelist__img">
@@ -136,64 +132,62 @@ get_header();
               <div class="pricelist__tabs">
                 <?php
                   if($vkladkas):
-                    $vkladkas_col=count($vkladkas); 
-                      ?>
-                      <style>@media (max-width: 730px){.pricelist__tab-content<?php echo $per; ?>{padding-top: <?php echo $vkladkas_col*41+12 ?>px}}</style>
-                      <?php
                     foreach ($vkladkas as $vkl => $vkladka):
+                      $foto2 = $vkladka['foto'];
+                      $kontents = $vkladka['kontent'];
+
                       if($vkl==0){$checked='checked';}else {$checked= '';}?>
+
                       <style>#tab<?php echo $per; ?>_<?php echo $vkl; ?>:checked~.pricelist__tab-titles label[for="tab<?php echo $per; ?>_<?php echo $vkl; ?>"]{background: #F63D71;color: #fff;cursor: default;}</style>
+
                       <input type="radio" id="tab<?php echo $per; ?>_<?php echo $vkl; ?>" name="tab-group<?php echo $per; ?>" <?php echo $checked; ?>>
 
                       <section class="pricelist__tab-content  pricelist__tab-content<?php echo $per; ?>">
-                        <?php  
-                          $stolbecz_1s = $vkladka['stolbecz_1'];
-                          if($stolbecz_1s):                      
-                            ?>
-                            <div class="pricelist__column pricelist__left">
-                              <?php
-                                foreach ($stolbecz_1s as $usl => $stolbecz_1):
-                                  $usluga = $stolbecz_1['usluga'];
-                                  $czena = $stolbecz_1['czena'];
+
+                        <div class="pricelist__content">
+                          <div class="pricelist__content-lin">
+
+                            <?php 
+                              if($kontents[0]):
+                                foreach ($kontents as $kon => $kontent):
+                                  $nazvanie = $kontent['nazvanie'];
+                                  $opisanie = $kontent['opisanie'];
+
                                   ?>
-                                  <div class="pricelist__line">
-                                    <div class="pricelist__line-left">
-                                      <?php echo $usluga; ?>
+                                    <div class="pricelist__p pricelist__p-<?php echo $kon; ?>">
+                                      <h3 class="pricelist__titl"><?php if($nazvanie){ echo $nazvanie; } ?></h3>
+                                      <p class="pricelist__text">
+                                        <?php if($opisanie){ echo $opisanie; } ?>
+                                      </p>
                                     </div>
-                                    <div class="pricelist__line-right">
-                                      <?php echo $czena; ?>
-                                    </div>
-                                  </div>
                                   <?php
                                 endforeach;
+                              endif;
+                            ?>
+
+                            <div class="pricelist__tabs-img">
+
+                              <?php 
+                                if( !empty( $foto2 ) ): ?>                                  
+                                  <img src="<?php echo esc_url($foto2['url']); ?>" alt="<?php echo esc_attr($foto2['alt']); ?>" />                                  
+                                  <?php
+                                endif;
                               ?>
+
+                              <a class="pricelist__button link_ns" data-fancybox="" data-src="#form_zvon" href="javascript:;">
+                                <div class="ico"></div>
+                                <span>Отправить резюме</span>
+                              </a>
+
                             </div>
-                            <?php
-                          endif;
-                          $stolbecz_2s = $vkladka['stolbecz_2'];
-                          if($stolbecz_2s):
-                            ?>
-                            <div class="pricelist__column pricelist__right">
-                              <?php
-                                foreach ($stolbecz_2s as $st1 => $stolbecz_2):
-                                  $usluga = $stolbecz_2['usluga'];
-                                  $czena = $stolbecz_2['czena'];
-                                  ?>
-                                  <div class="pricelist__line">
-                                    <div class="pricelist__line-left">
-                                      <?php echo $usluga; ?>
-                                    </div>
-                                    <div class="pricelist__line-right">
-                                      <?php echo $czena; ?>
-                                    </div>
-                                  </div>
-                                  <?php
-                                endforeach;
-                              ?>                                
-                            </div>
-                            <?php
-                          endif;
-                        ?> 
+
+                          
+                          </div>                          
+                        </div>
+
+
+
+ 
                       </section>
                       <?php
                     endforeach;

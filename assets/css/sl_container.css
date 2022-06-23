@@ -1,3 +1,7 @@
+img{
+  width: 100%;
+  height: auto;
+}
 button:hover{
   cursor: pointer;
 }
@@ -417,6 +421,97 @@ button.slick-disabled:hover{
   height: 2306px;
   z-index: -1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Вакансии */
+#vacancies{
+  box-sizing: border-box;
+}
+#vacancies .pricelist__title {
+  max-width: 100%;
+}
+#vacancies .pricelist__tab-titles{
+  border-radius: 20px 0 0;
+}
+#vacancies .pricelist__tab-title:first-child {
+  border-radius: 18px 0 0;
+}
+#vacancies .pricelist__tab-title:last-child {
+  border-radius: 0;
+}
+#vacancies .pricelist__tab-content{
+  padding-top: 53px;
+}
+.pricelist__titl{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #F63D71;
+}
+.pricelist__p{
+  max-width: 507px;
+  padding: 0 0 50px;
+}
+.pricelist__tabs-img{
+  max-width: 500px;
+}
+.pricelist__tabs-img img{
+  border-radius: 10px;
+}
+.pricelist__content{
+  width: 100%;
+  padding: 20px 28px 28px;
+  background: #FFFFFF;
+  border: 1px solid rgba(246, 61, 113, 0.3);
+  border-radius: 0px 10px 10px 10px;
+}
+.pricelist__content-lin{
+  column-count: 2;
+  column-gap: 33px;
+  padding: 20px 30px 33px 33px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.pricelist__content-lin div{
+  display: inline-block;
+}
+.pricelist__text{
+  margin: 10px 0 0;
+}
+#vacancies .pricelist__button{
+  margin: 20px 0 0;
+}
+
+/* end Вакансии */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2486,6 +2581,44 @@ footer{
     margin: 33px 0 0;
   }
   /* end Контактные данные */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Станьте частью команды */
+  #vacancies .plastic__sub{
+    width: 300px;
+  }
+  #vacancies .plastic__right{
+    top: 0px;
+    right: 0px;    
+  }
+  #vacancies .prescription_m {
+    margin: -40px 0 0;
+  }
+  #vacancies .prescription__akkord {
+    margin: 15px 0 0;
+  }
+  #vacancies .prescription__akkord-730 {
+    margin: 60px 0 0;
+  }
+  #vacancies .pricelist__button {
+    margin: -80px 0 40px;
+  }
+
+
+
+
+  /* end Станьте частью команды  */
 }
 
 
