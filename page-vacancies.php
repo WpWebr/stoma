@@ -26,7 +26,7 @@ get_header();
         <div class="plastic__left">
           <h1 class="titles plastic__title">Станьте частью команды&nbsp;<span class="akcent">White</span></h1>
           <p class="plastic__sub">Отправьте резюме и мы свяжемся с Вами<br>для назначения собеседования</p>
-          <a class="plastic__button link_ns" data-fancybox="" data-src="#form_zvon" href="javascript:;">
+          <a class="plastic__button link_ns" data-fancybox="" data-src="#form_vak" href="javascript:;">
             <div class="ico"></div>
             <span>Отправить резюме</span>
           </a> 
@@ -52,7 +52,8 @@ get_header();
             if( $rekomendaczii ): 
               ?>
               <div class="prescription__attention">
-                <p><?php echo $rekomendaczii; ?></p>
+                <p class="akcent_span"><?php echo $rekomendaczii; ?></p>
+                <a data-src="#mod-video" href="javascript:;" data-fancybox ><img src="<?php bloginfo('template_url') ?>/assets/img/plau.svg"></a>
               </div>
               <?php 
              endif;
@@ -174,7 +175,7 @@ get_header();
                                 endif;
                               ?>
 
-                              <a class="pricelist__button link_ns" data-fancybox="" data-src="#form_zvon" href="javascript:;">
+                              <a class="pricelist__button link_ns" data-fancybox="" data-src="#form_vak" href="javascript:;">
                                 <div class="ico"></div>
                                 <span>Отправить резюме</span>
                               </a>
@@ -226,5 +227,13 @@ get_header();
   ?>
 
 </div>
-
+<?php           
+  get_template_part( 'inc/mod', 'video'); //подключаем всплывашку видео-обзора
+?>
+<div style="display: none;" id="form_vak">
+  <div class="close_form">
+      <a href="" class="link_close_form"></a>
+  </div>
+  <?php echo do_shortcode( '[contact-form-7 id="2205" title="КФ Вакансия - Резюме"]' ); ?>
+</div>
 <?php get_footer();

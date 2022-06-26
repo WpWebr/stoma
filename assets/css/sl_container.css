@@ -495,6 +495,157 @@ button.slick-disabled:hover{
   margin: 20px 0 0;
 }
 
+#vacancies .prescription__attention{
+  width: 357px;
+  padding: 8px 22px 12px 11px;
+  left: 158px;
+  bottom: 47px;
+}
+#vacancies .prescription__attention img{
+  width: 60px;
+  margin: 0px 0 -7px;
+}
+#vacancies .prescription__attention::before{
+  display: none;
+}
+#mod-video{
+border-radius: 10px;
+}
+
+/* резюме */
+ #form_vak form{
+  position: relative;
+  width: 500px;
+  height: 530px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 30px 47px;
+  cursor: default;
+}
+.vak__title{
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #F63D71;
+  text-align: center;
+}
+.vak__text{
+  margin: 10px 0;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+}
+.tel-vak input,
+.text-vak input{
+  position: relative;
+  margin: 20px 0 0;
+  width: 360px;
+  height: 45px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+  padding: 0 0 0 34px;
+}
+.wpcf7-not-valid-tip{
+  position: absolute;
+}
+.vak__file{
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 19px;
+}
+.vak__file::before{
+  top: 2.3px;
+  right: 2.3px;
+  bottom: 1.5px;  
+  left: 2.3px;
+  
+}
+#form_vak span.wpcf7-list-item-label::before,
+#file-vak{
+  display: none;
+}
+.vak__sagr{
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 19px; 
+}
+.vak__file{
+  width: 175px;
+  height: 34px;
+  font-size: 14px;
+  line-height: 2.2; 
+}
+.acceptance-vak{
+  position: relative;
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 19px;  
+}
+.acceptance-vak::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/chek.svg);
+}
+#form_vak span.wpcf7-list-item{
+  margin: 0 0 0 35px;
+}
+.acceptance-vak a{
+  text-decoration: none;
+  color: #F63D71;
+}
+.vak__submit{
+  display: block;
+  margin: 30px auto 0;
+  position: relative;
+  width: 300px;
+  height: 59px;
+  cursor: pointer;  
+  font-size: 22px;
+  line-height: 2.5;
+}
+#vak__submit{
+  display: none;
+}
+.wpcf7 form.invalid .wpcf7-response-output{
+ display: none!important;
+}
+.wpcf7 form.sent .wpcf7-response-output{
+  position: absolute;
+  bottom: 17px;
+  background-color: #fff;
+  margin: 0;
+  padding: 38px 0;
+  border: none;
+  color: green;
+}
+/* Custom CF7 Loader */
+#form_vak div.wpcf7 .ajax-loader {
+  /* background-image: url('images/ajax-loader.gif'); */
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin: -80px 0 0 370px;
+}
+#mod-video .close_form a, 
+#form_vak .close_form a {
+  background: url(../img/close_vak.svg) center no-repeat;
+  width: 17px;
+  display: block;
+  height: 17px;
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  fill: #000;
+  z-index: 2;
+}
+
+ /* end резюме */
 /* end Вакансии */
 
 
@@ -1749,26 +1900,6 @@ footer{
   height: auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* vacancies  Вакансии*/
-/* 1 блок */
-
-
-
-
-
-/* end 1 блок */
-
-/* end vacancies  Вакансии*/
 
 
 

@@ -14,9 +14,6 @@ get_header(); ?>
         <li class="breadcrumbs__item">
           <a href="/" class="breadcrumbs__link">Главная</a>
         </li>
-        <!-- <li class="breadcrumbs__item">
-          <a href="/sorting/" class="breadcrumbs__link">Каталог</a>
-        </li> -->
         <li class="breadcrumbs__item">
           История <?php if( get_field( 'name' ) ): 
             the_field( 'name' ); endif; ?> <?php if( get_field( 'patronymic' ) ): 

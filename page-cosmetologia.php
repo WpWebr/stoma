@@ -25,7 +25,7 @@ get_header();
       <div class="plastic__div">
         <div class="plastic__left">
           <h1 class="titles plastic__title"> Контурная пластика лица с&nbsp;гарантией <span class="akcent">естественного результата </span> за&nbsp;60&nbsp;минут </h1>
-          <p class="plastic__sub">Для  коррекции вашей внешности, необходим осмотр у специалиста. Избежать разочарования просто - запишитесь на консультацию</p>
+          <p class="plastic__sub">Для  коррекции вашей внешности, необходим осмотр у специалиста. Избежать разочарования просто - ь на консультацию</p>
           <a class="plastic__button link_ns" data-fancybox="" data-src="#form_zvon" href="javascript:;">
             <div class="ico"></div>
             <span>Записаться на консультацию</span>
