@@ -6,7 +6,7 @@
 get_header(); ?>
 <?php $url_tem = esc_url( get_template_directory_uri() ); ?>
 
-<div class="bot_start_bg">
+<div id="stories" class="bot_start_bg">
     <!-- Крошки -->
   <div class="breadcrumbs">
     <div class="wrap">
@@ -28,7 +28,7 @@ get_header(); ?>
       <!-- История -->
       <div class="gistori__div">
         <div class="gistori__left">
-          <h1 class="gistori__title" >История <?php if( get_field( 'name' ) ): 
+          <h1 class="titles gistori__title" >История <?php if( get_field( 'name' ) ): 
             the_field( 'name' ); endif; ?> <?php if( get_field( 'patronymic' ) ): 
             the_field( 'patronymic' ); endif; ?></h1>
           <div class="gistori__dat">
@@ -116,7 +116,7 @@ get_header(); ?>
           </div>
         </div>
         <div class="compare__right">
-          <h2 class="compare__title">Как было и как стало ?</h2>
+          <h2 class="titles compare__title">Как было и как стало ?</h2>
           <div class="compare__akkord">
             <div class="acor-container">
               <input type="radio" name="acor" id="acor1" checked="checked" />

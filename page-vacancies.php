@@ -24,7 +24,7 @@ get_header();
     <div class="wrap">
       <div class="plastic__div">
         <div class="plastic__left">
-          <h1 class="titles plastic__title">Станьте частью команды&nbsp;<span class="akcent">White</span></h1>
+          <h1 class="titles comand__title">Станьте частью команды&nbsp;<span class="akcent">White</span></h1>
           <p class="plastic__sub">Отправьте резюме и мы свяжемся с Вами<br>для назначения собеседования</p>
           <a class="plastic__button link_ns" data-fancybox="" data-src="#form_vak" href="javascript:;">
             <div class="ico"></div>

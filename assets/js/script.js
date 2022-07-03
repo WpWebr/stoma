@@ -52,7 +52,7 @@ $('.slider_list_opinion').slick({
   slidesToScroll: 1
 })
 
-$('.slider_opinion_in').slick({
+$('.slider_opinion_in').slick({ //Отзывы о клинике - old
   infinite: false,
   variableWidth: true,
   slidesToShow: 2,
@@ -72,9 +72,6 @@ $('.link_close_form').click(function () {
   $.fancybox.close();
   return false;
 })
-
-
-
 
 $('.media__slider').slick({
   slidesToShow: 3,//кол-во отображаемых слайдов
@@ -115,7 +112,6 @@ $('.more__slider').slick({
   ]
 });
 
-
 $('#results').slick({
   slidesToShow: 3,//кол-во отображаемых слайдов
   slidesToScroll: 1,//кол-во прокручиваемых слайдов
@@ -141,12 +137,17 @@ $('#results').slick({
   ]
 });
 
-$('.recall__slider').slick({
+$('.recall__slider').slick({//Отзывы о клинике
+  adaptiveHeight: true,
   prevArrow: '<button type="button" class="slick-prev recall__prev">Предыдущий отзыв</button>',//HTML для кнопки "Назад"
   nextArrow: '<button type="button" class="slick-next recall__next">Следующий отзыв</button>',//HTML для кнопки "Вперед"
 });
 
-
+$('.burger_mobile').click(function () {
+  $('body').toggleClass('ksksks');
+  $('.nav_msken').toggleClass('open');
+  return false;
+})
 
 
 
@@ -196,7 +197,6 @@ $(".sender_sk").submit(function () {
   return false;
 });
 
-
 $(".sender_sk2").submit(function () {
   var form = $(this);
   var error = false;
@@ -243,13 +243,11 @@ $(".sender_sk2").submit(function () {
   return false;
 });
 
-
 $('.nav_msken .close').click(function () {
   $('body').toggleClass('ksksks');
   $('.nav_msken').toggleClass('open');
   return false;
 })
-
 
 $('.link_burger').click(function () {
   $('body').toggleClass('ksksks');
@@ -257,12 +255,3 @@ $('.link_burger').click(function () {
   $('.menu-uslugi-container').toggle();
   return false;
 })
-
-
-$('.burger_mobile').click(function () {
-  $('body').toggleClass('ksksks');
-  $('.nav_msken').toggleClass('open');
-  return false;
-})
-
-

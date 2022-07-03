@@ -5,71 +5,52 @@ Template name: Отзывы
 get_header(); ?>
 
 <div class="page_in bg_price">
-    <div class="wrap">
-        <div class="breadcrumb"><?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?></div>
+  <div class="wrap">
+    <div class="breadcrumb"><?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?></div>
+  </div>
+  <!-- Отзывы о клинике -->
+  <?php
+    $otzyvy = get_field('opinion');
+    if($otzyvy): ?>
+      <div class="recall opinions">
+        <div class="wrap">
+          <div class="opinions__div">
+            <h2 class="titles recall__title">Отзывы о&nbsp;клинике</h2>
+            <div class="recall__slider">
+              <?php
+                foreach ($otzyvy as $otz):
+                  $otzyv = $otz['text'];
+                  $image = $otz['img'];
+                  $otvet = $otz['otvet'];
+                  ?>
+                  <div class="slider__item opinions__item recall__item">
 
-        <div class="page_desc">
-            <h1><?=get_the_title()?></h1>
-        </div>
-
-        <div class="pc_view">
-            <div class="list_opinion slider_opinion_in smk clrfx">
-
-                <div class="line">
-                    <?  while ( have_rows('opinion') ) : the_row(); ?>
-                        <div class="ins">
-                            <div class="ttl"><?= get_sub_field('price_ins');?></div>
-                            <div class="block_bot_line">
-                                <div class="ins_bot_line">
-                                    <div class="inner">
-                                        <div class="top_ls clrfx">
-                                            <div class="left regal"><?= get_sub_field('fio');?></div>
-                                            <div class="right"><?= get_sub_field('date');?></div>
-                                        </div>
-                                        <div class="bot_ls clrfx">
-                                            <a href="<?= get_sub_field('img');?>" data-fancybox="images" class="left" style="background-image: url(<?= get_sub_field('img');?>)"></a>
-                                            <div class="right"><?= get_sub_field('text');?></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <?
-                        ++$count;
-                        echo (($count % 2 == 0)? '</div> <div class="line">': '');
-
-                    endwhile; ?>
-                </div>
-            </div>
-        </div>
-        <div class="mobile_view">
-            <div class="list_opinion slider_opinion_in smk clrfx">
-                <?  while ( have_rows('opinion') ) : the_row(); ?>
-                    <div class="ins">
-                        <div class="ttl"><?= get_sub_field('price_ins');?></div>
-                        <div class="block_bot_line">
-                            <div class="ins_bot_line">
-                                <div class="inner">
-                                    <div class="top_ls clrfx">
-                                        <div class="left regal"><?= get_sub_field('fio');?></div>
-                                        <div class="right"><?= get_sub_field('date');?></div>
-                                    </div>
-                                    <div class="bot_ls clrfx">
-                                        <a href="<?= get_sub_field('img');?>" data-fancybox="images" class="left" style="background-image: url(<?= get_sub_field('img');?>)"></a>
-                                        <div class="right"><?= get_sub_field('text');?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="opinions__left">
+                      <?php if( $image ): ?>
+                        <a href="<?= $image;?>" data-fancybox="images" class="opinions__img" style="background-image: url(<?= $image;?>)"><img class="opinions__img-pllup" src="/wp-content/themes/twentyseventeen/assets/img/pllup.svg"></a>                             
+                      <?php endif; ?>
+                      <p class="opinions__text"><?php echo $otzyv; ?></p>
                     </div>
-                    <?
-                    ++$count;
-                endwhile; ?>
-                </div>
-            </div>
-        </div>
 
-    </div>
+                    <?php if($otvet): ?>
+                      <div class="opinions__right">
+                        <p class="opinions__text opinions__text_otvet"><?php echo $otvet; ?></p>
+                        <img class="opinions__img-logo" src="/wp-content/themes/twentyseventeen/assets/img/logo.png">                      
+                      </div>
+                    <?php endif; ?>
+                    
+                  </div>
+                  <?php 
+                endforeach;
+              ?>
+
+            </div>            
+          </div>
+        </div>
+      </div>
+    <?php endif;
+  ?>
+    
 </div>
 
 <?php get_footer(); ?>

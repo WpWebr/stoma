@@ -54,6 +54,7 @@ button.slick-disabled:hover{
   text-align: center;
 }
 .my-review__img{
+  width: 260px;
   border-radius: 50%;
 }
 
@@ -164,6 +165,7 @@ button.slick-disabled:hover{
   top: 0; 
   left: 0; 
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -263,10 +265,13 @@ button.slick-disabled:hover{
 }
 .sl-container .dr-circle__r::before {
   transform: rotate(180deg);
-  margin: 19px 0px 4px -22px;
+  margin: 19px 0px 4px -17px;
 }
 .sl-container .dr-circle__r::after {
-  margin: -18px 0px 0px 18px;
+  margin: -18px 0px 0px 13px;
+}
+.sl-container{
+  height: 429px;
 }
 
 /*Конец До и После*/
@@ -439,8 +444,18 @@ button.slick-disabled:hover{
 #vacancies{
   box-sizing: border-box;
 }
-#vacancies .pricelist__title {
+.comand__title{
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 70px;
   max-width: 100%;
+}
+#vacancies .plastic__left{
+  width: 47%;
+  margin: 109px 0 0;
+}
+#vacancies .plastic__right {
+  max-width: 611px;
 }
 #vacancies .pricelist__tab-titles{
   border-radius: 20px 0 0;
@@ -453,6 +468,25 @@ button.slick-disabled:hover{
 }
 #vacancies .pricelist__tab-content{
   padding-top: 53px;
+}
+#vacancies .prescription__div{
+  justify-content: space-between;
+}
+#vacancies .prescription__left{
+  padding: 17px 0 0;
+}
+#vacancies .prescription__img{
+  max-width: 650px;
+}
+#vacancies .prescription__akkord {
+  margin: 25px 0 0;
+}
+#vacancies .pricelist__title{
+  max-width: 100%;
+  color: #F63D71;
+}
+#vacancies .pricelist__div{
+  margin: 36px 0 0;
 }
 .pricelist__titl{
   font-weight: 500;
@@ -498,7 +532,7 @@ button.slick-disabled:hover{
 #vacancies .prescription__attention{
   width: 357px;
   padding: 8px 22px 12px 11px;
-  left: 158px;
+  left: 170px;
   bottom: 47px;
 }
 #vacancies .prescription__attention img{
@@ -515,8 +549,8 @@ border-radius: 10px;
 /* резюме */
  #form_vak form{
   position: relative;
-  width: 500px;
-  height: 530px;
+  max-width: 500px;
+  min-height: 530px;
   background: #FFFFFF;
   border-radius: 10px;
   padding: 30px 47px;
@@ -539,7 +573,8 @@ border-radius: 10px;
 .text-vak input{
   position: relative;
   margin: 20px 0 0;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   height: 45px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -603,7 +638,8 @@ border-radius: 10px;
   display: block;
   margin: 30px auto 0;
   position: relative;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 59px;
   cursor: pointer;  
   font-size: 22px;
@@ -643,6 +679,7 @@ border-radius: 10px;
   top: 10px;
   fill: #000;
   z-index: 2;
+  opacity: .8;
 }
 
  /* end резюме */
@@ -1507,6 +1544,9 @@ a.contactes__button {
   overflow: hidden;
   max-height: 288px;
 }
+.opinions__text span{
+  color: #F63D71;
+}
 .recall__left{
   padding: 22px 0 0px;  
   max-width: 734px;
@@ -1627,7 +1667,7 @@ a.contactes__button {
 .results__slider .sl-container .dr-circle__r::after {
   margin: -17px 0px 0px 34px;
 }
-.sl-container .dr-circle__r::before {
+.results__slider .sl-container .dr-circle__r::before {
   margin: 17px 0px 4px 2px;
 }
 .results__slider .sl-container .dragme{
@@ -1900,18 +1940,78 @@ footer{
   height: auto;
 }
 
+#vacancies .plastic__button{
+ max-width: 300px;
+}
 
+/* Отзывы о клинике - страница */
+.recall__slider.slick-initialized .slick-slide.slider__item.opinions__item{
+  padding: 32px 60px 42px;
+  flex-direction: column;
+  height: auto;
+}
 
-
-
-
-
-
-
-
-
-
-
+.opinions__img{
+  display: block;
+  width: 210px;
+  min-height: 280px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: left;
+  margin: 0 70px 20px 0;
+}
+.opinions__text{
+  font-size: 22px;
+  line-height: 26px;
+}
+.opinions__right{
+  display: flex;  
+  margin: 60px 0 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.opinions__img-logo{
+  width: 111px;
+}
+.opinions__text_otvet{
+  position: relative;
+  width: calc(100% - 150px);
+  display: flex;
+  min-width: 18vw;
+  background: #FFFFFF;
+  border: 1px solid rgba(246, 61, 113, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+}
+.opinions__text_otvet::before,
+.opinions__text_otvet::after{
+  content: '';
+  position: absolute;
+  left: inherit;
+  right: -39px;
+  top: calc(50% - 15px);
+  border: 15px solid transparent;
+  border-left: 24px solid rgba(246, 61, 113, 0.3);
+}
+.opinions__text_otvet::after{
+  border-left: 25px solid white;
+  left: inherit;
+  right: -37px;
+}
+.opinions__text{
+  color: #000;
+}
+.opinions__img-pllup{
+  width: 48px;
+  height: 48px;
+  margin: 115px auto 0;
+}
+.opinions__img:hover .opinions__img-pllup{
+  width: 52px;
+  height: 52px;
+  margin: 113px auto 0;
+}
+/* end Отзывы о клинике - страница */
 
 /* ******* media ******* */
 
@@ -2039,6 +2139,59 @@ footer{
     padding: 18px 34px 28px;
   }
   /* end Дополнительные разделы */
+  /* Истории */
+  .compare__left {
+    float: left;
+    width: 50%;
+    padding: 8px 0 0;
+  }
+  .sl-container {
+    width: 488px;
+    height: 328px;
+  }
+  .sl-container .view img {
+    width: 490px;
+  }
+  .sl-container .dr-circle__r::before {
+    margin: 19px 0px 4px -16px;
+  }
+  .sl-container .dr-circle__r::after {
+    margin: -18px 0px 0px 13px;
+  }
+  .my-review {
+    margin: 14px 0 0;
+  }
+  .media__div {
+    margin: 58px 0 0;
+  }
+  .gistori__div{
+    display: flex;
+  }
+  .gistori__right {
+    position: relative;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  /* end Истории */
+  /* Вакансии */
+  #vacancies .prescription__attention{
+    left: 68px
+  }
+  .comand__title{
+    font-size: 50px;
+  }
+  #vacancies .plastic__left {
+    margin: 54px 0 0;
+    min-width: 47%;
+  }
+  /* end Вакансии */
+
+  .opinions__text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 @media (max-width: 970px){
@@ -2227,6 +2380,84 @@ footer{
     margin: 24px 0 0;
   }
   /* end Контактные данные */
+  /* Вакансии */
+  #vacancies .prescription__attention{
+    width: 310px;
+    height: 78px;
+    left: 23px;
+  }
+  #vacancies .prescription_m {
+    margin: 0;
+  }
+  /* end Вакансии */
+  /* Истории */
+  .compare{
+    height: auto;
+  }
+  .compare__div {
+    position:relative;
+    margin: 50px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .compare__left{
+    min-width:488px;
+    margin: 0 auto;
+    padding: 60px 0 0;
+  }
+  .compare__right {
+    width: 100%;
+    padding: 50px 0 0 0;
+  }
+  .compare__title{    
+    position: absolute;
+    top: 0;
+    left: calc(50% - 180px);
+  }
+  .compare__akkord{
+    margin: 0 auto;
+  }
+  .my-review {
+    margin: 40px 0 0;
+  }
+  .my-review__right {
+    width: 40%;
+    height: 200px;
+    text-align: center;
+  }
+  .my-review__img {
+    width: 200px;
+  }
+  .comand-lib_m {
+    margin: 50px 0 0;
+  }
+  .media__div-title,
+  .media__div {
+    margin: 0;
+  }
+  .media__slider {
+    margin: 30px 100px;
+  
+  }
+  .media__slider .slick-next {
+    right: calc(11% - 56px);
+    opacity: .7;
+  }
+  .media__slider .slick-prev {
+    left: calc(11% - 56px);
+    z-index: 1;
+    opacity: .7;
+  }
+  .enroll {
+    position: relative;
+    height: 386px;
+    background-position: 50%;
+  }
+  .enroll__div {
+    padding: 26px 0 0;
+  }
+
+  /* end Истории */
 }
 @media (max-width: 730px){
   h1.titles {
@@ -2489,7 +2720,7 @@ footer{
     margin: 20px auto 60px !important;
   }
   .doctors .item.slick-slide {
-    width: 260px !important;
+    width: 300px !important;
   }
   /* end Врачи проводившие  */
   /* Перечень услуг и стоимость */
@@ -2714,17 +2945,6 @@ footer{
   /* end Контактные данные */
 
 
-
-
-
-
-
-
-
-
-
-
-
   /* Станьте частью команды */
   #vacancies .plastic__sub{
     width: 300px;
@@ -2734,7 +2954,7 @@ footer{
     right: 0px;    
   }
   #vacancies .prescription_m {
-    margin: -40px 0 0;
+    margin: 0;
   }
   #vacancies .prescription__akkord {
     margin: 15px 0 0;
@@ -2743,13 +2963,220 @@ footer{
     margin: 60px 0 0;
   }
   #vacancies .pricelist__button {
-    margin: -80px 0 40px;
+    margin: 15px auto 5px;
+    display: block;
   }
 
-
-
-
   /* end Станьте частью команды  */
+    /* Вакансии */
+  #vacancies .prescription__attention{
+    width: 300px;
+    height: 78px;
+    left: 0;
+    padding: 8px 9px 12px 11px;
+  }
+  #vacancies .acor__label {
+    padding: 15px 10px;
+    line-height: 1.2;
+  }
+  #vacancies .pricelist__content{
+    padding: 4px 3px 6px;
+  }
+  #vacancies .pricelist__content-lin{
+    column-count: 1;
+    padding: 22px 3px 10px;
+  }
+  #vacancies .pricelist__tab-content {
+    padding-top: 114px;
+  }
+  #vacancies .pricelist__p {
+    padding: 0 0 20px;
+  }
+  #vacancies .pricelist__div-title{
+    width: 200px;
+  }
+  #vacancies .pricelist__title{
+    line-height: 1.2;
+    padding: 0 0 10px 45px; 
+  }
+  #vacancies .pricelist__img {
+    position: absolute;
+    top: 31px;
+    right: 0;
+  }
+  #vacancies .pricelist__tabs{
+    margin: 4px 0 0;
+  }
+  #vacancies .pricelist__div{
+    margin: 0;
+  }
+  #vacancies .plastic__left {
+    margin: 16px 0 0;
+  }
+
+    /* end Вакансии */
+  .tel-vak input, .text-vak input{
+    margin: 15px 0 0;
+  }
+  #form_vak form{
+    max-width: 400px;
+    padding: 30px 20px 10px;
+    overflow: hidden;
+  }
+  .vak__title{
+    font-size: 28px;
+  }
+  .vak__text{
+    font-size: 14px;
+  }
+  .acceptance-vak {
+    margin: 15px 0 0;
+    font-size: 14px;
+  }
+  .vak__submit {
+    margin: 25px auto 0;
+    height: 53px;
+    font-size: 20px;
+    line-height: 2.3;
+  }
+
+  .recall__slider.slick-initialized .slick-slide.slider__item.opinions__item{
+    padding: 15px 8px 20px;
+  }
+  .opinions__text {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+  .opinions__right{
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin: 15px 0 0;
+  }
+  .opinions__text_otvet{
+    width: 100%;
+  }
+  .opinions__text_otvet::before, .opinions__text_otvet::after {
+    content: '';
+    position: absolute;
+    left: inherit;
+    right: 44px;
+    top: -37px;
+    border: 12px solid transparent;
+    border-bottom: 24px solid rgba(246, 61, 113, 0.3);
+  }
+  .opinions__text_otvet::after {
+    border-bottom: 25px solid white;
+    left: inherit;
+    top: -35px;
+  }
+  .opinions__img-logo{
+    width: 86px;
+    margin: -108px 13px 29px 0;
+  }
+  .opinions__img {
+    width: 140px;
+    min-height: 208px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: none;
+    margin: 16px auto 0 16px;
+  }
+  .opinions__left{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .opinions__left .opinions__text{
+    padding: 0 6px;
+  }
+  .opinions__img-pllup{
+    width: 38px;
+    height: 38px;
+    margin: 70px auto 0;
+  }
+  .opinions__img:hover .opinions__img-pllup{
+    width: 42px;
+    height: 42px;
+    margin: 68px auto 0;
+  }
+  /* Истории */
+
+  .media__slider .slick-prev,
+  .media__slider .slick-next{
+    opacity: 0;
+  }
+  #stories .media__img img{
+    width: inherit;
+  }
+  .gistori__div {
+    margin: 25px 0 0;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+  .gistori__right{
+    margin: 80px 0 0;
+    max-width: 100%;
+    height: 0%;
+    padding: 56.4% 0 0;
+  }
+  .gistori__left {
+    width: 100%;
+    float: left;
+  }
+  .gistori__title{
+    position: absolute;
+    top:0
+  }
+  .gistori__dat{
+    margin: 25px 0 0;
+  }
+  .gistori__dat-ed{
+    font-size: 16px;
+  }
+  .gistori__button {
+    margin: 25px auto 0;
+    display: block;
+  }
+  .compare__title{
+    left: 0;
+    text-align: center;
+  }
+  .sl-container {
+    width: 300px;
+    height: 201px;
+  }
+  .sl-container .view img {
+    width: 300px;
+  }
+  .sl-container .view-after {
+    width: 100px;
+    z-index: 200;
+  }
+  .my-review__title {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .my-review__div{
+    flex-direction: column-reverse;    
+  }
+  .my-review__left {
+    width: 94%;
+    max-width: 520px;
+  }
+  .my-review__right {
+    width: 100%;
+    height: 150px;
+  }
+  .my-review__img {
+    width: 140px;
+  }
+  .media__div-title{
+    margin: 0;
+  }
+  #page{
+    overflow: hidden;
+  }
+  /* end Истории */
 }
 
 

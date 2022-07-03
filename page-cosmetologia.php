@@ -782,16 +782,18 @@ get_header();
   </div>
 </div>
 <script>
-    const tpl = '{{contents}}';
-    let contents = '';
-    const elHeaders = document.querySelectorAll('.wrap h2');
-    elHeaders.forEach((el, index) => {
-      if (!el.id) {
-        el.id = `id-${index}`;
-      }
-      const url = `${location.href.split('#')[0]}#${el.id}`;
-      contents += `<li class="plastic-menu__link"><a href="${url}">${el.textContent}</a></li>`;
-    });
-    document.querySelector('#aside').insertAdjacentHTML('afterbegin', tpl.replace('{{contents}}', contents));
-  </script>
+	if(document.querySelector('#aside')){
+		const tpl = '{{contents}}';
+		let contents = '';
+		const elHeaders = document.querySelectorAll('.wrap h2');
+		elHeaders.forEach((el, index) => {
+		  if (!el.id) {
+			el.id = `id-${index}`;
+		  }
+		  const url = `${location.href.split('#')[0]}#${el.id}`;
+		  contents += `<li class="plastic-menu__link"><a href="${url}">${el.textContent}</a></li>`;
+		});
+		document.querySelector('#aside').insertAdjacentHTML('afterbegin', tpl.replace('{{contents}}', contents));
+	}
+</script>
 <?php get_footer();

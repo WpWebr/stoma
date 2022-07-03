@@ -502,11 +502,13 @@ function my_scripts_method(){
     wp_enqueue_style( 'all', get_theme_file_uri( '/assets/css/css.css' ), array(), $d );
 
 
-    if( is_singular('stories') || is_page(33) || is_page(2133) ){
+    if( is_singular('stories') || is_page(33) || is_page(2133) || is_page(29) ){
       wp_enqueue_style( 'sl-container', get_theme_file_uri( '/assets/css/sl_container.css' ), array(), $d );
   
       wp_enqueue_script('af-bt', get_theme_file_uri( '/assets/js/af-bt.js' ), array('jquery'), $d , true);
     }
+
+    wp_enqueue_script('contents-menu', get_theme_file_uri( '/assets/js/contents-menu.js' ), array('jquery'), $d , true);
 
     wp_enqueue_script('jquery-all', get_theme_file_uri( '/assets/js/jquery.js' ), array(), '1.1', true );
     wp_enqueue_script('fancybox-js', get_theme_file_uri( '/assets/js/jquery.fancybox.min.js' ), array(), '1.1', true );
